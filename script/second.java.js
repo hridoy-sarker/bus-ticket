@@ -48,19 +48,14 @@ function setTotal(){
             button.disabled = true;
         });
     }
-    const applyButton = document.getElementById('success-btn');
+    const applyButton = document.getElementById('applyButton');
+
     if (newTotal === 2200) {
         applyButton.classList.remove('hidden'); 
     } 
-
-    // if (newTotal > 0) {
-    //     applyButton.classList.remove('hidden'); 
-    // } 
+    
 }
-function successButton(){
-    const applyButton = document.getElementById('success-btn'); 
 
-}
 function manageBuyButton(){
     const validCoupons = [
         { code: 'New 15', discount: 100 },

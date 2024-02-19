@@ -80,5 +80,5 @@ function buyTicket(){
    
 }
 function successButton(){
-    showElementById('success-btn');
+    showElementById('success-section');
 }
