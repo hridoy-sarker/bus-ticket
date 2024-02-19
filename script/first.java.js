@@ -1,35 +1,14 @@
-// function buyTicket(){
-//     const bannerSection = document.getElementById('banner');
-//     bannerSection.classList.add('hidden');
 
-//     const paribahanSection = document.getElementById('paribahan');
-//     paribahanSection.classList.remove('hidden');
-//     const purchaseTicket = getTicket();
-//     addBackgroundColorById(purchaseTicket);
-// }
-
-// function addBackgroundColorById(elementId){
-//     const element = document.getElementById(elementId);
-//     element.classList.add('bg-green-400');
-// }
-
-// function getTicket(){
-//     const ticket= ['A1','A2','A3','A4','B1','B2','B3','B4'];
-//     const randomTicket = Math.random()*4;
-//     const index = Math.round(randomTicket);
-//     const purchaseTicket = ticket[index];
-//     return purchaseTicket;
-// }
 
 function continueBuyTicketA1(){
-    // const purchaseTicket = getRandomTicket();
-    // console.log(purchaseTicket);
-
+    
     addBackgroundColorById('A1');
     updateSeat('A1');
     availableSeat('A1');
     showElementById('add-element1');
+    showElementById('success-btn');
     setTotal('A1');
+
     // manageBuyButton('A1');
     
    
@@ -103,27 +82,3 @@ function buyTicket(){
 function successButton(){
     showElementById('success-btn');
 }
-//  // Variables
-//  let totalPrice = 0;
-//  const MAX_PRICE = 2200;
-
-//  // Function to update total price
-//  function updateTotalPrice(price) {
-//    totalPrice += price;
-//    if (totalPrice >= MAX_PRICE) {
-//      document.getElementById('addToCartButton').disabled = true;
-//    }
-//  }
-
-//  // Function to simulate adding an item to the cart
-//  function addItemToCart(price) {
-//    // Update total price
-//    updateTotalPrice(price);
-//    console.log('Item added. Total Price:', totalPrice);
-//  }
-
-//  // Event listener for button click
-//  document.getElementById('addToCartButton').addEventListener('click', function() {
-//    const itemPrice = /* Replace this with the price of the item */;
-//    addItemToCart(itemPrice);
-//  });

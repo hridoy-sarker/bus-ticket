@@ -41,37 +41,41 @@ function setTotal(){
     const newTotal = currentTotal + 550;
     currentTotalElement.innerText = newTotal;
     
-    const buttonsToDisable = document.querySelectorAll('.purchase-button'); // Assuming buttons have a common class 'purchase-button'
+    const buttonsToDisable = document.querySelectorAll('.purchase-button'); 
 
     if (newTotal === 2200) {
         buttonsToDisable.forEach(button => {
             button.disabled = true;
         });
     }
-    const applyButton = document.getElementById('applyButton');
-
+    const applyButton = document.getElementById('success-btn');
     if (newTotal === 2200) {
-        applyButton.classList.remove('hidden'); // Show the apply button
+        applyButton.classList.remove('hidden'); 
     } 
-}
 
+    // if (newTotal > 0) {
+    //     applyButton.classList.remove('hidden'); 
+    // } 
+}
+function successButton(){
+    const applyButton = document.getElementById('success-btn'); 
+
+}
 function manageBuyButton(){
     const validCoupons = [
         { code: 'New 15', discount: 100 },
         { code: 'Couple 20', discount: 150 }
     ];
     
-    // Function to handle applying the coupon
+    
     function applyCoupon() {
         const couponInput = document.getElementById('coupon-input').value;
         const purchaseButton = document.getElementById('purchase-button');
     
         if (couponInput === validCoupons) {
-            // Enable the purchase button
+           
             purchaseButton.classList.removeAttribute('disabled');
-            // Apply discount (assuming total is stored in a variable named 'total')
             total -= discountAmount;
-            // Update total display (replace this line with code to update total display)
            const grandTotal = document.getElementById('grand-total');
            const newTotal = grandTotal + total;
         } else {
@@ -79,7 +83,7 @@ function manageBuyButton(){
         }
     }
     
-    // Add event listener to the apply coupon button
+    
     document.getElementById('purchase-button').addEventListener('click', applyCoupon);
 }
 
